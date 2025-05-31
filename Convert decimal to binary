@@ -1,16 +1,17 @@
-## Hi there 👋
-
-<!--
-**Arifakhtar786/Arifakhtar786** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+#include <iostream>
+using namespace std;
+int main() {
+    int power = 1, answer = 0, n;
+   cout<<"Enter any number:";
+    cin>>n;
+    int a=n;
+    while(n>0){
+        int remainder=n%2;
+        n=n/2;
+        answer+=(remainder*power);
+      power=power*10;
+    }
+cout<<"The Binary code for "<<a<< " is:"<<answer<<endl;
+  
+    return 0;
+}
