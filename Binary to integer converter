@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;  
+int main() {//binary to integer
+    int power=1,n,ans=0,rem;
+    cout<<"Enter any binary number:";
+    cin>>n;
+    while(n>0){
+    rem=n%2;
+    ans+=power*rem;
+    power=power*2;
+    n=n/10;
+    }
+    cout<<ans<<endl;
+  
+    return 0;
+}
