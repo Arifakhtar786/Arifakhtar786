@@ -5,7 +5,7 @@ int main() {//binary to integer
     cout<<"Enter any binary number:";
     cin>>n;
     while(n>0){
-    rem=n%2;
+    rem=n%10;
     ans+=power*rem;
     power=power*2;
     n=n/10;
