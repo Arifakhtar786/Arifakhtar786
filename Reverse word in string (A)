@@ -1,0 +1,27 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    string s = "hello arif how are you";
+    string ans = "";
+    // Reverse the entire string
+    reverse(s.begin(), s.end());
+    // Reverse each word to restore original word order
+    for(int i = 0; i < s.size(); i++){
+        string word = "";
+        while(i < s.size() && s[i] != ' '){
+            word += s[i];
+            i++;
+        }
+        reverse(word.begin(), word.end());
+        if(!word.empty()){
+           ans += word + " ";
+        }
+    }
+    // Remove trailing space and print
+    if(!ans.empty())
+    ans.pop_back();  
+    cout << ans << endl;
+    return 0;
+}
