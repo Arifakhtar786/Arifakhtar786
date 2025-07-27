@@ -9,15 +9,15 @@ int main(){
    cin>>n;
     int s=1;
     if(n==1){
-    cout<<"nither prime nor not prime"<<endl;
-        cout<<"do you want to run another test (y/n)"<<endl;
+    cout<<"nither prime nor not prime\n";
+        cout<<"do you want to run another test (y/n)\n";
          cin>>choice;
         continue;
     return 0;
     }
     if(n<=0){
-        cout<<"please enter only positive value"<<endl;
-        cout<<"do you want to run another test (y/n)"<<endl;
+        cout<<"please enter only positive value\n";
+        cout<<"do you want to run another test (y/n)\n";
          cin>>choice;
         continue;
         return 0;
@@ -29,15 +29,15 @@ int main(){
     }
     }
        if(s){
-           cout<<" prime "<<endl;
+           cout<<" prime\n";
        }else{
-           cout<<"not a prime"<<endl;
+           cout<<"not a prime\n";
        }   
-    cout<<"do you want to run another test (y/n)"<<endl;
+    cout<<"do you want to run another test (y/n)\n";
      cin>>choice;
     }while(choice == 'y' || choice == 'Y');
     if(choice == 'n' || choice =='N'){
-        cout<<"♡THANK YOU♡"<<endl;
+        cout<<"♡THANK YOU♡\n";
     }
         return 0;
     }
