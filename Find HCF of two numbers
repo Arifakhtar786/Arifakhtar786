@@ -1,34 +1,30 @@
 #include<iostream>
-#include<algorithm>// gcd
+#include<algorithm>
 using namespace std;
 int main(){
-int n,m;
+    int a,b;
     cout<<"enter first number==>";
-    cin>>n;
+    cin>>a;
     cout<<"enter second number==>";
-    cin>>m;
-    int s = min(n,m);
-    int j;
-    if(m==0){
-        cout<<"The hcf of two numbers is "<<n<<endl;
+    cin>>b;
+    bool loop = true; 
+    if (a == 0 && b == 0) {
+        cout << "HCF is undefined (both numbers are 0)" << endl;
         return 0;
     }
-    if(n==0){
-        cout<<"The hcf of two numbers is "<<m<<endl;
-        return 0;
-    }
-    if(n==m){
-        cout<<"the hcf of two numbers is "<< n <<endl;
-        return 0;
-    }
-    if(m!=0 || n!=0){
-    for(j=s; j>=1;j--){
-        if(n%j==0 && m%j==0){
-         break;
+    do{
+     if(a>b){
+         a=a-b; 
+     }
+        else if(b>a){
+            b=b-a; 
+        }if(a==b || a==0 ||b==0){
+            cout << "HCF is: " <<(a==0? b:a) << endl;
+            loop = false;
         }
-    }
-
-    cout<<"the hcf of two numbers is "<< j <<endl;
-    }
+        
+    }while(loop);
 return 0;
 }
+
+ 
